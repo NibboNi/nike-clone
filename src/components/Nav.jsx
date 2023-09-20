@@ -30,7 +30,7 @@ const Nav = () => {
                         :
                         (
                             document.body.style.overflow = "hidden",
-                            <div className='bg-white absolute w-full top-0 left-0 h-screen flex flex-col items-center justify-center gap-3 list-none'>
+                            <div className='bg-white absolute w-full top-0 left-0 h-screen flex flex-col items-center justify-center gap-3 list-none z-10'>
                                 {navLinks.map( item => (
                                     <li key={item.label}>
                                         <a href={item.href} className='fonts-montserrat leading-normal text-lg text-slate-gray' onClick={() => setOpenMenu(!openMenu)}>
