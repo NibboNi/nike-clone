@@ -5,6 +5,7 @@ import { navLinks } from '../constants';
 
 const Nav = () => {
     const [ openMenu, setOpenMenu ] = useState(false);
+
     return (
         <header className='padding-x py-8 absolute z-10 w-full'>
             <nav className='flex justify-between items-center max-container'>
@@ -22,7 +23,7 @@ const Nav = () => {
                 </ul>
                 <div className='lg:hidden' >
                     {
-                        openMenu ?
+                        !openMenu ?
                         (
                             document.body.style.overflow = "auto",
                             <img src={hamburger} alt='Menu' width={25} height={25} onClick={() => setOpenMenu(!openMenu)} />
